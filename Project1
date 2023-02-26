@@ -1,0 +1,87 @@
+/*************************************************************************************
+
+* Program Name: COP 3503 Project 1
+* Description: A program that calculates the product sum and average of usesr's input
+* Author: Monica Barrow (N01505878)
+* Date: February 6th, 2022
+
+**************************************************************************************/
+//Pre-processor derectives
+import java.util.*;
+
+public class main
+{
+        public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        boolean flag = true;
+        
+        while(flag = true) {
+        	//Introduction 
+        	System.out.println("Please enter FOUR numbers to calculate the product, sum and average of those numbers.");
+            System.out.println();
+            
+            //First Input           
+            System.out.println("First Number: ");
+            int input_1 = input.nextInt();
+            
+            //Second Input
+            System.out.println("Second Number: ");
+            int input_2 = input.nextInt();
+                        
+            //Third Input
+            System.out.println("Third Number: ");
+            int input_3 = input.nextInt(); 
+            
+            //Fourth Input
+            System.out.println("Fourth Number: ");
+            int input_4 = input.nextInt(); 
+            System.out.println();
+                        
+            //Function Calls
+            System.out.println("**Calculations:**");
+            
+            System.out.printf("Product is:");
+            System.out.printf(" %.2f\n",  getMultiplication(input_1, input_2 , input_3, input_4));
+            
+            
+            System.out.printf("Sum is:");
+            System.out.printf(" %.2f\n", getAddition(input_1, input_2,input_3, input_4));
+          
+            
+            
+            System.out.printf("Average is:"); 
+            System.out.printf(" %.2f\n", getAverage(input_1, input_3, input_3, input_4));
+            System.out.println();
+            
+            //Repeat or Terminate Program
+            System.out.println("Do  wish to run the program again?");
+            System.out.println("Type '1' for YES or '0' for NO.");
+            int choice = input.nextInt();
+            if (choice == 1){
+            	flag=true; }
+            else {
+            	flag=false;
+            	System.out.printf("Program terminated.");
+            	break;}}}
+
+
+        /**
+         This function multiplies the user's input */
+        static double getMultiplication (int input_1, int input_2, int input_3, int input_4){
+                double product = (double)input_1 * (double) input_2 * (double) input_3 * (double)input_4;
+                return product;}
+
+        /**
+        This function adds the user's input */
+        static double getAddition(int input_1, int input_2, int input_3, int input_4){
+                double sum = (double)input_1 + (double) input_2 + (double)input_3 + (double)input_4;
+                return sum;}
+
+        /**
+        This function obtains the average of the user's input */
+        static double getAverage(int input_1, int input_2, int input_3, int input_4){
+                double average = (((double)input_1 + (double)input_2 + (double)input_3 + (double)input_4) /4);
+                return average;
+                }//End main function 
+        
+        }//Ends Class
