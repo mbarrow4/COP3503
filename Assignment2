@@ -1,0 +1,38 @@
+//Input package
+import java.util.Scanner;
+
+public class main {
+
+	public static void main(String[] args) {
+
+		int count = 1;
+		float total = 0;
+		double taxes = .075;
+		
+  
+        // Exit when x becomes greater than 4
+        while (count <= 3)
+        {
+        	Scanner scan = new Scanner(System.in);  // Create a Scanner object
+            System.out.println("Please enter a price: ");
+
+            float num = scan.nextFloat();  // Read user input
+            System.out.println("Price: " + num);  // Output user input
+            total += num;
+           
+        	count = count+1;
+        	num =  num + num;
+        	
+        	if (count == 4) 
+        	{
+        		  System.out.println("Your total BEFORE taxes: " + total);
+        		  double sum = total * taxes;
+        		  double finalNum = total + sum;
+        		  System.out.printf("Your total AFTER taxes:");
+        		  System.out.printf("%.2f", finalNum);
+        		}
+       
+        	
+        }
+    }
+}
